@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Resume - JobFetch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">JobFetch</span>
+                <div class="logo-dot"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Login</a></li>
+                <li><a href="get-started.html" class="btn btn-primary">Get Started</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resume Form -->
+    <section class="resume-form">
+        <div class="container">
+            <div class="form-card">
+                <h2 class="form-title">Build Your Resume</h2>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 25%;"></div>
+                </div>
+                
+                <form id="resumeForm">
+                    <!-- Personal Information -->
+                    <fieldset class="form-section active">
+                        <legend>Personal Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <div class="focus-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="focus-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                            <div class="focus-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn URL</label>
+                            <input type="url" id="linkedin" name="linkedin">
+                            <div class="focus-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="github">GitHub URL</label>
+                            <input type="url" id="github" name="github">
+                            <div class="focus-line"></div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Education -->
+                    <fieldset class="form-section">
+                        <legend>Education</legend>
+                        
+                        <div class="form-group">
+                            <label for="school">School/University</label>
+                            <input type="text" id="school" name="school" required>
+                            <div class="focus-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="degree">Degree</label>
+                            <input type="text" id="degree" name="degree" required>
+                            <div class="focus-line"></div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="field">Field of Study</label>
+                                <input type="text" id="field" name="field">
+                                <div class="focus-line"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gradYear">Graduation Year</label>
+                                <input type="number" id="gradYear" name="gradYear" min="1900" max="2100">
+                                <div class="focus-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                            <button type="button" class="btn btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Skills -->
+                    <fieldset class="form-section">
+                        <legend>Skills</legend>
+                        
+                        <div class="form-group">
+                            <label for="skills">Your Skills (comma separated)</label>
+                            <textarea id="skills" name="skills" rows="3" placeholder="JavaScript, HTML, CSS, Python,..."></textarea>
+                            <div class="focus-line"></div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                            <button type="button" class="btn btn-next">Next <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Experience -->
+                    <fieldset class="form-section">
+                        <legend>Experience</legend>
+                        
+                        <div id="experienceContainer">
+                            <!-- Experience items will be added here -->
+                        </div>
+                        
+                        <button type="button" id="addExperience" class="btn btn-add">
+                            <i class="fas fa-plus"></i> Add Experience
+                        </button>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                            <button type="submit" class="btn btn-submit">
+                                <span class="btn-text">Generate Resume</span>
+                                <div class="spinner hidden"></div>
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
